@@ -15,9 +15,12 @@ import java.util.List;
 public class ShopService {
     @Autowired
     ShopRepository shopRepository;
+    @Autowired
+    AccountService accountService;
 
-    public ShopService(ShopRepository shopRepository){
+    public ShopService(ShopRepository shopRepository, AccountService accountService){
         this.shopRepository = shopRepository;
+        this.accountService = accountService;
     }
 
     public Shop getById(Long id){
@@ -40,7 +43,11 @@ public class ShopService {
         shopRepository.findById(id).ifPresent(shopFromRepo -> shopFromRepo.setName(shop.getName()));
     }
 
-    public void addAccount(Long id, Account account){
-        shopRepository.findById(id).ifPresent(shopFromRepo -> shopFromRepo.addAccount(account));
+    public void addAccount(Long shopId, Long accountId){
+        shopRepository.findById(shopId).ifPresent(shopFromRepo -> shopFromRepo.addAccount(accountService.getById(accountId)));
+    }
+
+    public void removeAll() {
+        shopRepository.deleteAll();
     }
 }

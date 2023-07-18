@@ -1,6 +1,7 @@
 package com.dlp.mms.Entities;
 
 import com.dlp.mms.Auditables.AuditableEntity;
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -20,6 +21,7 @@ import java.util.List;
 public class Shop extends AuditableEntity<User> {
     @Column
     private String name;
+    @Hidden
     @OneToMany
     private List<Account> employeesList;
 
