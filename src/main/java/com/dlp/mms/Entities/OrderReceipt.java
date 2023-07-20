@@ -3,6 +3,7 @@ package com.dlp.mms.Entities;
 import com.dlp.mms.Auditables.AuditableEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,8 +22,8 @@ import java.time.LocalDateTime;
 public class OrderReceipt extends AuditableEntity<User> {
     @Column
     private LocalDateTime orderDate;
-    @Column
-    private Account cashier;
+    @ManyToOne
+    private User cashier;
     @Column
     private double totalAmount;
 }

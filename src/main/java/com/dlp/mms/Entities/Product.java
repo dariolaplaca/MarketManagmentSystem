@@ -2,9 +2,7 @@ package com.dlp.mms.Entities;
 
 import com.dlp.mms.Auditables.AuditableEntity;
 import com.dlp.mms.Enums.ProductCategory;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -24,6 +22,7 @@ public class Product extends AuditableEntity<User> {
     private int quantityInStock;
     @Column
     private double price;
+    @Enumerated(EnumType.STRING)
     @Column
     private ProductCategory category;
 }

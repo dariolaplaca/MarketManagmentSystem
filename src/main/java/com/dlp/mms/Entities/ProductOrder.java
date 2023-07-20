@@ -1,10 +1,7 @@
 package com.dlp.mms.Entities;
 
 import com.dlp.mms.Auditables.AuditableEntity;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,9 +15,9 @@ import org.springframework.security.core.userdetails.User;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProductOrder extends AuditableEntity<User> {
-    @OneToMany
+    @ManyToOne
     private OrderReceipt orderReceipt;
-    @OneToMany
+    @ManyToOne
     private Product product;
     @Column
     private int quantity;

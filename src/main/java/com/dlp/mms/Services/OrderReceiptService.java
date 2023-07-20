@@ -45,4 +45,7 @@ public class OrderReceiptService {
         });
     }
 
+    public void removeAll() {
+        orderReceiptRepository.deleteAll();
+    }
 }

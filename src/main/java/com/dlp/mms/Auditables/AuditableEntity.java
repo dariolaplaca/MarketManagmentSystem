@@ -11,7 +11,9 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @MappedSuperclass
 @Data
@@ -38,15 +40,15 @@ public abstract class AuditableEntity<User>{
 
     @Hidden
     @LastModifiedDate
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "modified_on")
-    private LocalDateTime modifiedOn;
+    private Timestamp modifiedOn;
 
     @Hidden
     @Column(name = "created_on")
     @CreatedDate
-    @Temporal(TemporalType.DATE)
-    private LocalDateTime createdOn;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Timestamp createdOn;
 
     public AuditableEntity(){
         this.recordStatus = RecordStatus.ACTIVE;

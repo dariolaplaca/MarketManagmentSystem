@@ -44,4 +44,8 @@ public class ProductOrderService {
             productOrderRepository.saveAndFlush(productOrderFromRepo);
         });
     }
+
+    public void removeAll() {
+        productOrderRepository.deleteAll();
+    }
 }

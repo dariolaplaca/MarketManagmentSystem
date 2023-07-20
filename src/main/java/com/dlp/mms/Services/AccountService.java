@@ -2,6 +2,7 @@ package com.dlp.mms.Services;
 
 import com.dlp.mms.Entities.Account;
 import com.dlp.mms.Repositories.AccountRepository;
+import com.dlp.mms.Security.PasswordManager;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,9 +16,12 @@ import java.util.List;
 public class AccountService {
     @Autowired
     AccountRepository accountRepository;
+    @Autowired
+    PasswordManager passwordManager;
 
-    public AccountService(AccountRepository accountRepository){
+    public AccountService(AccountRepository accountRepository, PasswordManager passwordManager){
         this.accountRepository = accountRepository;
+        this.passwordManager = passwordManager;
     }
 
     public Account getById(Long id){
@@ -29,6 +33,7 @@ public class AccountService {
     }
 
     public void saveNew(Account account){
+        account.setPassword(passwordManager.encodePassword(account.getPassword()));
         accountRepository.saveAndFlush(account);
     }
 

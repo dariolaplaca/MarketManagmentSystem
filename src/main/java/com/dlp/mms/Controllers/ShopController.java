@@ -6,6 +6,7 @@ import com.dlp.mms.Entities.Shop;
 import com.dlp.mms.Services.ShopService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,9 +61,21 @@ public class ShopController {
     }
 
     @PutMapping("/add-account/{shopId}/{accountId}")
-    public ResponseEntity<ResponseStringDTO> addAccountToShop(@PathVariable Long id, @PathVariable Long accountId){
-        shopService.addAccount(id, accountId);
-        return ResponseEntity.ok(new ResponseStringDTO("Account " + accountId + " added to shop " + id));
+    public ResponseEntity<ResponseStringDTO> addAccountToShop(@PathVariable Long shopId, @PathVariable Long accountId){
+        ResponseStringDTO responseString = shopService.addAccount(shopId, accountId);
+        if(responseString.getMessage().contains("not found")){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(responseString);
+        }
+        return ResponseEntity.ok(responseString);
+    }
+
+    @GetMapping("/get-employees-list/{shopId}")
+    public ResponseEntity<List<Account>> getEmployeesList(@PathVariable Long shopId){
+        List<Account> employeesList = shopService.getAllEmployees(shopId);
+        if(employeesList == null){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(employeesList);
     }
 
 

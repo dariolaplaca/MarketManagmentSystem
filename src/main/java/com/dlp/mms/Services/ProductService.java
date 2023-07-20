@@ -49,4 +49,7 @@ public class ProductService {
     }
 
 
+    public void removeAll() {
+        productRepository.deleteAll();
+    }
 }
