@@ -2,13 +2,12 @@ package com.dlp.mms.Services;
 
 import com.dlp.mms.Entities.Account;
 import com.dlp.mms.Repositories.AccountRepository;
-import com.dlp.mms.Security.PasswordManager;
+import com.dlp.mms.Config.PasswordManager;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @NoArgsConstructor
@@ -34,6 +33,7 @@ public class AccountService {
 
     public void saveNew(Account account){
         account.setPassword(passwordManager.encodePassword(account.getPassword()));
+        account.setUsername(account.getEmail());
         accountRepository.saveAndFlush(account);
     }
 
@@ -44,7 +44,8 @@ public class AccountService {
     @Transactional
     public void update(Long id, Account account){
         accountRepository.findById(id).ifPresent(accountFromRepo -> {
-            accountFromRepo.setUsername(account.getUsername());
+            accountFromRepo.setFirstName(account.getFirstName());
+            accountFromRepo.setLastName(account.getLastName());
             accountFromRepo.setPassword(account.getPassword());
             accountFromRepo.setEmail(account.getEmail());
             accountFromRepo.setUserRole(account.getUserRole());

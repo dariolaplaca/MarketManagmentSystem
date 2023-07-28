@@ -18,7 +18,7 @@ import java.util.Date;
 @MappedSuperclass
 @Data
 @EntityListeners(AuditingEntityListener.class)
-public abstract class AuditableEntity<User>{
+public abstract class AuditableEntity<Account>{
     @Hidden
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,12 +31,12 @@ public abstract class AuditableEntity<User>{
     @Hidden
     @Column(name = "modified_by")
     @LastModifiedBy
-    private User modifiedBy;
+    private Account modifiedBy;
 
     @Hidden
     @Column(name = "created_by")
     @CreatedBy
-    private User createdBy;
+    private Account createdBy;
 
     @Hidden
     @LastModifiedDate

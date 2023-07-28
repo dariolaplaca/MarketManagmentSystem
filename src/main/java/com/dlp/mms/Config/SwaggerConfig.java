@@ -1,4 +1,4 @@
-package com.dlp.mms.Security;
+package com.dlp.mms.Config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;

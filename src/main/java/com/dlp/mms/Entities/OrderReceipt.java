@@ -23,7 +23,7 @@ public class OrderReceipt extends AuditableEntity<User> {
     @Column
     private LocalDateTime orderDate;
     @ManyToOne
-    private User cashier;
+    private Account cashier;
     @Column
     private double totalAmount;
 }
