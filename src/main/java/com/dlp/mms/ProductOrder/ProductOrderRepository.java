@@ -1,6 +1,6 @@
-package com.dlp.mms.Repositories;
+package com.dlp.mms.ProductOrder;
 
-import com.dlp.mms.Entities.ProductOrder;
+import com.dlp.mms.ProductOrder.ProductOrder;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductOrderRepository extends JpaRepository<ProductOrder, Long> {

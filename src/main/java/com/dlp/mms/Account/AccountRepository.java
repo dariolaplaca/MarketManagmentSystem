@@ -1,6 +1,6 @@
-package com.dlp.mms.Repositories;
+package com.dlp.mms.Account;
 
-import com.dlp.mms.Entities.Account;
+import com.dlp.mms.Account.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

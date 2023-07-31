@@ -1,5 +1,6 @@
-package com.dlp.mms.Entities;
+package com.dlp.mms.Shop;
 
+import com.dlp.mms.Account.Account;
 import com.dlp.mms.Auditables.AuditableEntity;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.Column;

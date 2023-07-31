@@ -1,4 +1,4 @@
-package com.dlp.mms.Entities;
+package com.dlp.mms.Product;
 
 import com.dlp.mms.Auditables.AuditableEntity;
 import com.dlp.mms.Enums.ProductCategory;

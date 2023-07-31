@@ -1,7 +1,7 @@
-package com.dlp.mms.Services;
+package com.dlp.mms.Account;
 
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Repositories.AccountRepository;
+import com.dlp.mms.Account.Account;
+import com.dlp.mms.Account.AccountRepository;
 import com.dlp.mms.Config.PasswordManager;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

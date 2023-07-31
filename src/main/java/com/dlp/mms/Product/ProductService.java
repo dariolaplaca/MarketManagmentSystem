@@ -1,9 +1,5 @@
-package com.dlp.mms.Services;
+package com.dlp.mms.Product;
 
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Entities.Product;
-import com.dlp.mms.Entities.Shop;
-import com.dlp.mms.Repositories.ProductRepository;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

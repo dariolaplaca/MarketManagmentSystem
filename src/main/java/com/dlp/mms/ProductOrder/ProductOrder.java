@@ -1,6 +1,8 @@
-package com.dlp.mms.Entities;
+package com.dlp.mms.ProductOrder;
 
 import com.dlp.mms.Auditables.AuditableEntity;
+import com.dlp.mms.OrderReceipt.OrderReceipt;
+import com.dlp.mms.Product.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

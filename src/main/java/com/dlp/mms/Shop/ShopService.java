@@ -1,16 +1,14 @@
-package com.dlp.mms.Services;
+package com.dlp.mms.Shop;
 
+import com.dlp.mms.Account.AccountService;
 import com.dlp.mms.DTOs.ResponseStringDTO;
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Entities.Shop;
-import com.dlp.mms.Repositories.ShopRepository;
+import com.dlp.mms.Account.Account;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 @NoArgsConstructor
 @Service

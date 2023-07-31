@@ -1,8 +1,7 @@
-package com.dlp.mms.Services;
+package com.dlp.mms.OrderReceipt;
 
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Entities.OrderReceipt;
-import com.dlp.mms.Repositories.OrderReceiptRepository;
+import com.dlp.mms.OrderReceipt.OrderReceipt;
+import com.dlp.mms.OrderReceipt.OrderReceiptRepository;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

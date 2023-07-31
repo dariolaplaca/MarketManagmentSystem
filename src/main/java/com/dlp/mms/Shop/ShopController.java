@@ -1,9 +1,9 @@
-package com.dlp.mms.Controllers;
+package com.dlp.mms.Shop;
 
 import com.dlp.mms.DTOs.ResponseStringDTO;
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Entities.Shop;
-import com.dlp.mms.Services.ShopService;
+import com.dlp.mms.Account.Account;
+import com.dlp.mms.Shop.Shop;
+import com.dlp.mms.Shop.ShopService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

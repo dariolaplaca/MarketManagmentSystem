@@ -1,7 +1,7 @@
 package com.dlp.mms.Config;
 
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Repositories.AccountRepository;
+import com.dlp.mms.Account.Account;
+import com.dlp.mms.Account.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

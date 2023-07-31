@@ -1,6 +1,5 @@
-package com.dlp.mms.Repositories;
+package com.dlp.mms.Shop;
 
-import com.dlp.mms.Entities.Shop;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ShopRepository extends JpaRepository<Shop, Long> {

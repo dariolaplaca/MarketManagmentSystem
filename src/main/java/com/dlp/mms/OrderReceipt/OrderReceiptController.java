@@ -1,10 +1,8 @@
-package com.dlp.mms.Controllers;
+package com.dlp.mms.OrderReceipt;
 
 import com.dlp.mms.DTOs.ResponseStringDTO;
-import com.dlp.mms.Entities.OrderReceipt;
-import com.dlp.mms.Entities.ProductOrder;
-import com.dlp.mms.Services.OrderReceiptService;
-import com.dlp.mms.Services.ProductOrderService;
+import com.dlp.mms.OrderReceipt.OrderReceipt;
+import com.dlp.mms.OrderReceipt.OrderReceiptService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

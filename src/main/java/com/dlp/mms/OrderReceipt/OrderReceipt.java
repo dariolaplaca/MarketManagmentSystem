@@ -1,5 +1,6 @@
-package com.dlp.mms.Entities;
+package com.dlp.mms.OrderReceipt;
 
+import com.dlp.mms.Account.Account;
 import com.dlp.mms.Auditables.AuditableEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

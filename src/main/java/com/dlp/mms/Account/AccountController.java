@@ -1,8 +1,6 @@
-package com.dlp.mms.Controllers;
+package com.dlp.mms.Account;
 
 import com.dlp.mms.DTOs.ResponseStringDTO;
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Services.AccountService;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

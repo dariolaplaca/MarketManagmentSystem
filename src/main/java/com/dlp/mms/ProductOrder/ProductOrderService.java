@@ -1,9 +1,5 @@
-package com.dlp.mms.Services;
+package com.dlp.mms.ProductOrder;
 
-import com.dlp.mms.Entities.Account;
-import com.dlp.mms.Entities.Product;
-import com.dlp.mms.Entities.ProductOrder;
-import com.dlp.mms.Repositories.ProductOrderRepository;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

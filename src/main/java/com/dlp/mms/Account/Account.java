@@ -1,4 +1,4 @@
-package com.dlp.mms.Entities;
+package com.dlp.mms.Account;
 
 import com.dlp.mms.Auditables.AuditableEntity;
 import com.dlp.mms.Enums.UserRole;
